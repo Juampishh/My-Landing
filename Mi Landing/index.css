@@ -140,11 +140,106 @@ main{
    text-align: center;
 }
 
+/*CARDS*/
+.section-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 100vh;
+}
 
+.title-section-info {
+    color: black;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.paragraph-section-info {
+    color:  black;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.container-section-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-element-info {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container-element-info img {
+    width: 25%;
+}
+
+
+.container-element-info p {
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 20px;
+    width: 50%;
+}
+
+/*FOOTER*/
+
+
+.section-contact{
+    margin-top: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 100vh;
+}
+
+.container-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+
+.section-contact h2{
+    align-items: center;
+    font-size: 3em;
+}
+
+.icono-ubi img{
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+}
+
+.icono-email img{
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+.icono-telefono img{
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
 
 
 /*MEDIAQUERIS*/
-@media (max-width: 992px){
+
+@media (max-width: 992px) {
     .presentacion{
         text-align: center;
         width: 90%;
@@ -155,23 +250,28 @@ main{
         display: block;
         width: 100%;
     }
-
-    .presentacion p {
+    .presentacion p{
         max-width: 80%;
         font-size: 16px;
     }
+
     .button-contenedor{
         justify-content: center;
-
     }
     .hero-img{
         display: none;
     }
-    #about{
-        font-size: 15px;
+    .section-info h2{
+        font-size: 1.5em;
+    }
+    .section-info p {
+        width: 80%;
+    }
+    .container-section-info p{
+        font-size: small;
+        font-weight: 500;
     }
 }
-
 @media (max-width:576px){
     .navbar ul{
         background-color: white;
@@ -198,4 +298,50 @@ main{
     .presentacion p {
         max-width: 100%;
     }
+
+    .section-contact h2{
+        font-size: 1.8em;
+    }
+
+    .section-contact h3{
+        font-size: 1.2em;
+    }
+    .container-contact{
+        gap: 30px;
+    }
+
+    .container-contact p{
+        font-size: small;
+    }
 }
+
+/*ANIMACIONS Y TRANSICIONES*/
+
+ .boton-primario:hover{
+    animation-duration: 1s;
+    animation-name: botonprimario;
+    animation-iteration-count: infinite;
+ }
+
+ @keyframes botonprimario {
+    from{
+        background-color: black;
+    }
+    to{
+        background-color: red;
+    }
+ }
+
+ .boton-secundario:hover{
+    animation-duration: 1s;
+    animation-name: botonsecundario;
+    animation-iteration-count: infinite;
+ }
+ @keyframes botonsecundario {
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: red;
+    }
+ }
